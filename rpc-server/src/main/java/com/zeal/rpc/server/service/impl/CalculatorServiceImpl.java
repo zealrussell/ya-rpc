@@ -1,6 +1,7 @@
-package com.zeal.server.service.impl;
+package com.zeal.rpc.server.service.impl;
 
-import com.zeal.server.service.CalculatorService;
+import com.zeal.rpc.server.core.RpcService;
+import com.zeal.rpc.server.service.CalculatorService;
 
 /**
  * WHAT THE ZZZZEAL
@@ -9,8 +10,8 @@ import com.zeal.server.service.CalculatorService;
  * @Date 2022/10/5 11:54
  * @Version 1.0
  */
+@RpcService(CalculatorService.class)
 public class CalculatorServiceImpl implements CalculatorService {
-
     @Override
     public float sum(float a, float b) {
         return a + b;

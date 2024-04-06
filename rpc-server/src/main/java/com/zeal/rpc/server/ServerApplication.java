@@ -1,5 +1,6 @@
 package com.zeal.rpc.server;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -9,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @Date 2022/10/5 13:21
  * @Version 1.0
  */
-public class App 
+public class ServerApplication 
 {
     public static void main( String[] args )
     {

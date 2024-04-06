@@ -1,4 +1,4 @@
-package com.zeal.common.protocol;
+package com.zeal.rpc.common.protocol;
 
 import lombok.Data;
 
@@ -11,10 +11,15 @@ import lombok.Data;
  */
 @Data
 public class RpcResponse {
+    
     private String requestId;
 
     private Throwable error;
 
     private Object result;
+
+    public boolean isError(){
+        return error != null;
+    }
 
 }

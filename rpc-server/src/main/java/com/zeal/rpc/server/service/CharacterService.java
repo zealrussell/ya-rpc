@@ -1,4 +1,4 @@
-package com.zeal.server.service;
+package com.zeal.rpc.server.service;
 
 /**
  * WHAT THE ZZZZEAL

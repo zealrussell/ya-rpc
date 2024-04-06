@@ -1,4 +1,4 @@
-package com.zeal.common.protocol;
+package com.zeal.rpc.common.protocol;
 
 import lombok.Data;
 

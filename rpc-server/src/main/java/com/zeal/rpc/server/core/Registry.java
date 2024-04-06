@@ -1,6 +1,6 @@
-package com.zeal.server.core;
+package com.zeal.rpc.server.core;
 
-import com.zeal.common.Constant;
+import com.zeal.rpc.common.Constant;
 import org.apache.zookeeper.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +29,7 @@ public class Registry {
      * 注册到zookeeper，创建节点
      * @param data
      */
-    public void registry(String data) {
+    public void register(String data) {
         if (data != null) {
             ZooKeeper zk = connectServer();
             if (zk != null) {

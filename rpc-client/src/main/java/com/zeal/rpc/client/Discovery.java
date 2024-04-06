@@ -1,6 +1,6 @@
-package com.zeal.client;
+package com.zeal.rpc.client;
 
-import com.zeal.common.Constant;
+import com.zeal.rpc.common.Constant;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
@@ -40,17 +40,17 @@ public class Discovery {
 
     /**
      * 服务发现
-     * @return data
+     * @return 服务器地址
      */
-    public String discovery() {
+    public String discover() {
         String data = null;
         int size = dataList.size();
         if (size > 0) {
             if (size == 1) {
                 data = dataList.get(0);
+            } else {
+                data = dataList.get(ThreadLocalRandom.current().nextInt(size));
             }
-        } else {
-            data = dataList.get(ThreadLocalRandom.current().nextInt(size));
         }
         return data;
     }
@@ -78,8 +78,8 @@ public class Discovery {
     }
 
     /**
-     *
-     * @param zk
+     * 查找节点
+     * @param zk zookeeper
      */
     private void watchNode(final ZooKeeper zk) {
         try {

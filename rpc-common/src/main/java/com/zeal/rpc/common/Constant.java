@@ -1,4 +1,4 @@
-package com.zeal.common;
+package com.zeal.rpc.common;
 
 /**
  * WHAT THE ZZZZEAL
@@ -9,7 +9,7 @@ package com.zeal.common;
  */
 public interface Constant {
 
-    int ZK_SESSION_TIMEOUT = 5000;
+    int ZK_SESSION_TIMEOUT = 3000;
     /**
      * zookeeper根节点
      */

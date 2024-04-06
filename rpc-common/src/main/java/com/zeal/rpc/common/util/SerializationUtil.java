@@ -1,4 +1,4 @@
-package com.zeal.common.util;
+package com.zeal.rpc.common.util;
 
 import com.dyuproject.protostuff.LinkedBuffer;
 import com.dyuproject.protostuff.ProtostuffIOUtil;

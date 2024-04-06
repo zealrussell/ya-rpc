@@ -208,7 +208,7 @@ float result1 = calculatorService.sum(1.3F, 2.0F);
 
 createService 方法使用了 spring 提供的动态代理类，通过反射在运行时创建一个实现某些给定接口的新类。
 
-在处理类中，首先狗仔一个 rpc 请求，依次填入 请求ID、类名、 方法名、 参数类型、 参数值，接着调用 discover 方法，发现服务器，最后通过 send 方法向服务器发送该请求，并监听，返回监听到的 RpcResponse 结果。
+在处理类中，首先构建一个 rpc 请求，依次填入 请求ID、类名、 方法名、 参数类型、 参数值，接着调用 discover 方法，发现服务器，最后通过 send 方法向服务器发送该请求，并监听，返回监听到的 RpcResponse 结果。
 
 ```java
 public <T> T createService(Class<?> serviceClass) {

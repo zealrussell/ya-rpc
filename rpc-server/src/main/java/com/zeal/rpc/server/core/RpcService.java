@@ -1,4 +1,4 @@
-package com.zeal.server.core;
+package com.zeal.rpc.server.core;
 
 import org.springframework.stereotype.Component;
 
